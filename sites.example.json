@@ -1,0 +1,19 @@
+{
+  "sites": [
+    {
+      "name": "books.toscrape.com",
+      "start_url": "https://books.toscrape.com/catalogue/page-1.html",
+      "item": "article.product_pod",
+      "fields": {
+        "title": "h3 a@title",
+        "price": "p.price_color",
+        "availability": "p.availability",
+        "rating": {"selector": "p.star-rating@class", "regex": "star-rating (\\w+)"},
+        "url": "h3 a@href"
+      },
+      "next_page": "li.next a",
+      "delay_seconds": 0.5,
+      "max_pages": 50
+    }
+  ]
+}
